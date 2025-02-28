@@ -1,0 +1,20 @@
+name: first CI/CD
+
+on:
+  pull_request:
+    branches:
+      - main
+
+
+jobs:
+  welcome_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome part
+        run: echo "Hello, guys🤤"
+      - name: Get info
+        run: |
+          echo "Getting comp info..."
+          whoami
+          sleep 5
+          pwd
