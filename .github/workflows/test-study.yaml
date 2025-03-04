@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Welcome part
-        run: echo "Hello, guys🤤277"
+        run: echo "Hello, guys🤤2727"
       - name: Get info
         run: |
           echo "Getting comp info..."
