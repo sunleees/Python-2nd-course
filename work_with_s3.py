@@ -1,10 +1,10 @@
 import boto3
 
-ACCESS_KEY = 'ba88124bb9f211337bbc6c103330c249'
-SECRET_KEY = '863ba92413967d939d8cd1296b9010d62099712bb76c44fde5ffcea771822180'
+ACCESS_KEY = 'e5e87ede6c862531b59a283bfebca80d'
+SECRET_KEY = 'f315a2eabe802cb3cdde50d3287e07ce17266ca96a440020ba004d7e4f6d0ae1'
 BUCKET_NAME = 'group25022025'
-ENDPOINT = 'https://8721af4803f2c3c631a90d8b64d397b7.r2.cloudflarestorage.com/group25022025'
-PUBLIC_URL = 'https://pub-d2b580fe400441b19434564174b8efa7.r2.dev'
+ENDPOINT = 'https://f617d2ef7efe773c811bfd2127ade693.r2.cloudflarestorage.com/group25022025'
+PUBLIC_URL = 'https://pub-868f509dfcb24895838ff73db7650ffe.r2.dev'
 
 s3client = boto3.client(
     's3',
@@ -16,6 +16,6 @@ s3client = boto3.client(
 
 
 # UPLOAD FILE
-s3client.upload_file('spring.jpeg', BUCKET_NAME, '123.jpeg')
+s3client.upload_file('spring.jpeg', BUCKET_NAME, 'Platon.jpeg')
 
 
