@@ -1,10 +1,12 @@
 import uuid
 
+
 class Book:
     def __init__(self, author: str, title: str):
         self.author = author
         self.title = title
         self.id = str(uuid.uuid4())  # унікальний ідентифікатор
+
 
 class Library:
     def __init__(self, name: str):

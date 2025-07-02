@@ -1,36 +1,17 @@
-import pika.adapters.blocking_connection
 import json
+
+import pika.adapters.blocking_connection
+
 from config import get_connection
-from time import sleep
-
-
-# def produce_message(channel: pika.adapters.blocking_connection.BlockingChannel):
-#     QUEUE = 'news'
-#     channel.queue_declare(queue=QUEUE)
-#
-#     message = 'hello kitty ))) {item}'
-#     for item in range(221):
-#         channel.basic_publish(
-#             exchange='',
-#             routing_key=QUEUE,
-#             body=message.format(item=item)
-#         )
 
 
 def produce_logs(channel: pika.adapters.blocking_connection.BlockingChannel):
-    QUEUE = 'logs'
+    QUEUE = "logs"
     channel.queue_declare(queue=QUEUE)
 
     for i in range(100):
-        message = {
-            "event": "user_registered",
-            "user_id": i+1
-        }
-        channel.basic_publish(
-            exchange='',
-            routing_key=QUEUE,
-            body=json.dumps(message)
-        )
+        message = {"event": "user_registered", "user_id": i + 1}
+        channel.basic_publish(exchange="", routing_key=QUEUE, body=json.dumps(message))
 
 
 def main():
